@@ -5,6 +5,9 @@
   padding: 15px 10px;
   min-height: 80px;
 }
+.namecard-container:hover {
+  background-color: lightgrey;
+}
 .namecard-container__user-thumb {
   display: flex;
   justify-content: center;
@@ -28,4 +31,8 @@
 }
 .namecard-container__user-details p {
   margin: 0;
+}
+
+.namecard-container__user-details .name {
+  text-transform: capitalize;
 }
