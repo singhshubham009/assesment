@@ -1,0 +1,10 @@
+.user-details-container {
+  margin-left: 400px;
+  height: 100vh;
+  width: calc(100% - 400px);
+  background-color: #f1f1f1;
+}
+.user-details-container h1 {
+  margin: 0;
+  padding: 20px 10px;
+}

@@ -1,5 +1,7 @@
 import React from "react";
 
+import "./UserDetails.css";
+
 class UserDetails extends React.Component {
   // componentDidUpdate(prevProps) {
   //     if(prevProps.selectedUser !== this.props.selectedUser)
@@ -10,7 +12,7 @@ class UserDetails extends React.Component {
     let userDetails = <h1>Select an User!</h1>;
     if (this.props.user && this.props.user.name.first)
       userDetails = (
-        <div className="user-details-container">
+        <React.Fragment>
           <div className="user-details-container__user-image">
             <img
               alt="user-pic"
@@ -47,9 +49,9 @@ class UserDetails extends React.Component {
             } - ${this.props.user.location.postcode}`}</p>
             <strong>{this.props.user.location.state}</strong>
           </div>
-        </div>
+        </React.Fragment>
       );
-    return <React.Fragment>{userDetails}</React.Fragment>;
+    return <div className="user-details-container">{userDetails}</div>;
   }
 }
 

@@ -1,15 +1,30 @@
 import React from "react";
 import NameCard from "./NameCard/NameCard";
 
+import "./NameList.css";
+
 class NameList extends React.Component {
   state = {
     scrollPosition: 0
   };
   componentDidMount() {
-    this.props.onGetUserDetails({ pageNo: 1 });
+    this.props.onGetUserDetails({ pageNo: this.props.pageNo });
   }
   componentDidUpdate() {}
-  handleScroll = event => {};
+  handleScroll = () => {
+    console.log(
+      this.nameListDiv.clientHeight,
+      this.nameListDiv.scrollTop,
+      this.nameListDiv.scrollHeight
+    );
+    if (
+      parseInt(this.nameListDiv.clientHeight) +
+        parseInt(this.nameListDiv.scrollTop) ===
+      parseInt(this.nameListDiv.scrollHeight)
+    ) {
+      this.props.onGetUserDetails({ pageNo: this.props.pageNo });
+    }
+  };
   render() {
     let nameCards = [];
     this.props.users.map(user => {
@@ -25,7 +40,15 @@ class NameList extends React.Component {
         />
       );
     });
-    return <div className="name-list-container">{nameCards}</div>;
+    return (
+      <div
+        className="name-list-container"
+        ref={elem => (this.nameListDiv = elem)}
+        onScroll={() => this.handleScroll()}
+      >
+        {nameCards}
+      </div>
+    );
   }
 }
 

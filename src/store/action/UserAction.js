@@ -13,7 +13,7 @@ export const getUserDetailsRequest = payload => {
   return dispatch => {
     dispatch(isLoading(true));
     axios
-      .get(`${ep}/api/?page=${payload.pageNo}&results=10&seed=randomuser`)
+      .get(`${ep}/api/?page=${payload.pageNo}&results=15&seed=randomuser`)
       .then(response => {
         if (response.data) {
           dispatch(getUserDetailsSuccess(response.data.results));

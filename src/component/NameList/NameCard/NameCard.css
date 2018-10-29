@@ -1,0 +1,31 @@
+.namecard-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 15px 10px;
+  min-height: 80px;
+}
+.namecard-container__user-thumb {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 50px;
+  border: 2px solid #f1f1f1;
+  border-radius: 50%;
+}
+.namecard-container__user-thumb img {
+  height: 48px;
+  width: 48px;
+  border-radius: 50%;
+}
+.namecard-container__user-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-left: 10px;
+}
+.namecard-container__user-details p {
+  margin: 0;
+}

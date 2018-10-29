@@ -10,13 +10,15 @@ const initialState = {
 const UserReducer = handleActions(
   {
     FETCH_USER_SUCCESS: (state, action) => {
+      let newOffset = parseInt(state.offset) + 1;
       let newResults = state.results.slice();
       action.payload.map(user => {
         newResults.push(user);
       });
       return {
         ...state,
-        results: newResults
+        results: newResults,
+        offset: newOffset
       };
     },
     SELECT_USER: (state, action) => {

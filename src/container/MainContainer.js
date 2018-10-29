@@ -36,6 +36,7 @@ class MainContainer extends React.Component {
           users={this.props.users}
           selectedUser={this.props.selectedUser}
           onSelectUser={this.props.onSelectUser}
+          pageNo={this.props.pageNo}
         />
         <UserDetails user={selectedUserDetails} />
       </div>
@@ -46,7 +47,8 @@ class MainContainer extends React.Component {
 const mapStateToProps = state => {
   return {
     users: state.users.results,
-    selectedUser: state.users.selectedUserUUID
+    selectedUser: state.users.selectedUserUUID,
+    pageNo: state.users.offset
   };
 };
 
