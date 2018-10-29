@@ -17,6 +17,9 @@
   background-color: bisque;
   cursor: default;
 }
+.namecard-container:hover {
+  background-color: lightgrey;
+}
 .namecard-container__user-thumb {
   display: flex;
   justify-content: center;
@@ -40,4 +43,8 @@
 }
 .namecard-container__user-details p {
   margin: 0;
+}
+
+.namecard-container__user-details .name {
+  text-transform: capitalize;
 }

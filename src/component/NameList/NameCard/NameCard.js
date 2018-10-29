@@ -18,7 +18,7 @@ class NameCard extends React.Component {
           <img alt="user-thumb" src={this.props.thumbnail} />
         </div>
         <div className="namecard-container__user-details">
-          <strong>{this.props.name}</strong>
+          <strong className="name">{this.props.name}</strong>
           <p>{this.props.email}</p>
         </div>
       </div>

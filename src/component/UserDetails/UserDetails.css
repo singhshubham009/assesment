@@ -9,6 +9,7 @@
   justify-content: flex-start;
   align-items: center;
 }
+
 .user-details-container h1 {
   margin: 0;
 }
@@ -33,4 +34,33 @@
 }
 .fa-venus {
   color: pink;
+}
+
+.user-details-outer-container {
+  display: flex;
+}
+.user-details {
+  position: relative;
+}
+.user-details-container__user-image img {
+  height: 125px;
+  width: 125px;
+  border-radius: 3%;
+}
+
+.user-details-container__user {
+  padding-left: 30px;
+}
+
+.user-details-container__user-name {
+  text-transform: capitalize;
+}
+
+.user-details-container__user-contact {
+  font-size: 0.8em;
+}
+
+.user-details-container__user-address {
+  font-size: 0.8em;
+  text-transform: capitalize;
 }
