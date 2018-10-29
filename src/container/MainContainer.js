@@ -38,7 +38,10 @@ class MainContainer extends React.Component {
           onSelectUser={this.props.onSelectUser}
           pageNo={this.props.pageNo}
         />
-        <UserDetails user={selectedUserDetails} />
+        <UserDetails
+          user={selectedUserDetails}
+          innerWidth={this.state.innerWidth}
+        />
       </div>
     );
   }

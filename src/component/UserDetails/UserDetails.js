@@ -3,12 +3,7 @@ import React from "react";
 import "./UserDetails.css";
 
 class UserDetails extends React.Component {
-  // componentDidUpdate(prevProps) {
-  //     if(prevProps.selectedUser !== this.props.selectedUser)
-
-  // }
   render() {
-    console.log(this.props.user);
     let userDetails = <h1>Select an User!</h1>;
     if (this.props.user && this.props.user.name.first)
       userDetails = (
@@ -24,9 +19,14 @@ class UserDetails extends React.Component {
             />
           </div>
           <div className="user-details-container__user-name">
-            <span>{`${this.props.user.name.title} ${
-              this.props.user.name.first
-            } ${this.props.user.name.last}`}</span>{" "}
+            <strong>{`${this.props.user.name.title.charAt(0).toUpperCase() +
+              this.props.user.name.title.slice(
+                1
+              )} ${this.props.user.name.first.charAt(0).toUpperCase() +
+              this.props.user.name.first.slice(
+                1
+              )} ${this.props.user.name.last.charAt(0).toUpperCase() +
+              this.props.user.name.last.slice(1)}`}</strong>{" "}
             <span>
               {this.props.user.gender === "male" ? (
                 <i className="fas fa-mars" />
@@ -36,18 +36,21 @@ class UserDetails extends React.Component {
             </span>
           </div>
           <div className="user-details-container__user-contact">
-            <span>{`${this.props.user.email} | ${
+            <span>{`${this.props.user.email}  |  ${
               this.props.user.phone
                 ? this.props.user.phone
                 : this.props.user.cell
             }`}</span>
           </div>
           <div className="user-details-container__user-address">
-            <label>Address</label>
+            <label>Address:</label>
             <p>{`${this.props.user.location.street}, ${
               this.props.user.location.city
             } - ${this.props.user.location.postcode}`}</p>
-            <strong>{this.props.user.location.state}</strong>
+            <strong>
+              {this.props.user.location.state.charAt(0).toUpperCase() +
+                this.props.user.location.state.slice(1)}
+            </strong>
           </div>
         </React.Fragment>
       );

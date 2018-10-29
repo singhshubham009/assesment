@@ -32,9 +32,3 @@ export const selectUser = payload => {
     dispatch(userSelected(payload));
   };
 };
-
-// export const selectUser = payload => {
-//     return dispatch => {
-
-//     }
-// }

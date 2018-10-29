@@ -12,11 +12,6 @@ class NameList extends React.Component {
   }
   componentDidUpdate() {}
   handleScroll = () => {
-    console.log(
-      this.nameListDiv.clientHeight,
-      this.nameListDiv.scrollTop,
-      this.nameListDiv.scrollHeight
-    );
     if (
       parseInt(this.nameListDiv.clientHeight) +
         parseInt(this.nameListDiv.scrollTop) ===
@@ -35,7 +30,7 @@ class NameList extends React.Component {
           thumbnail={user.picture.thumbnail}
           email={user.email}
           uuid={user.login.uuid}
-          selectedUser={user.selectedUserUUID}
+          selectedUser={this.props.selectedUser}
           onSelectUser={this.props.onSelectUser}
         />
       );

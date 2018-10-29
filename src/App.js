@@ -6,7 +6,7 @@ import "./App.css";
 class App extends Component {
   render() {
     return (
-      <div styleName="app">
+      <div className="app">
         <ErrorHandler errorHandler={this.props.reportError}>
           <MainContainer />
         </ErrorHandler>

@@ -3,9 +3,6 @@ import React from "react";
 import "./NameCard.css";
 
 class NameCard extends React.Component {
-  //   onClickUser = () => {
-  //     this.props.onSelectUser(this.props.uuid);
-  //   };
   render() {
     return (
       <div
