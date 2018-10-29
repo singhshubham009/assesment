@@ -1,10 +1,46 @@
 .user-details-container {
-  margin-left: 400px;
-  height: 100vh;
-  width: calc(100% - 400px);
-  background-color: #f1f1f1;
+  margin: 0;
+  margin-left: 200px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: auto;
+  padding: 50px 30px;
+  background-color: #d7d7c1;
+  border-radius: 2%;
 }
+
 .user-details-container h1 {
   margin: 0;
   padding: 20px 10px;
+}
+
+.user-details-outer-container {
+  display: flex;
+}
+.user-details {
+  position: relative;
+}
+.user-details-container__user-image img {
+  height: 125px;
+  width: 125px;
+  border-radius: 3%;
+}
+
+.user-details-container__user {
+  padding-left: 30px;
+}
+
+.user-details-container__user-name {
+  text-transform: capitalize;
+}
+
+.user-details-container__user-contact {
+  font-size: 0.8em;
+}
+
+.user-details-container__user-address {
+  font-size: 0.8em;
+  text-transform: capitalize;
 }

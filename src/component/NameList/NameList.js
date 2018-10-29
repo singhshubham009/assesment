@@ -41,12 +41,15 @@ class NameList extends React.Component {
       );
     });
     return (
-      <div
-        className="name-list-container"
-        ref={elem => (this.nameListDiv = elem)}
-        onScroll={() => this.handleScroll()}
-      >
-        {nameCards}
+      <div className="name-list">
+        <div className="name-list-header">Users</div>
+        <div
+          className="name-list-container"
+          ref={elem => (this.nameListDiv = elem)}
+          onScroll={() => this.handleScroll()}
+        >
+          {nameCards}
+        </div>
       </div>
     );
   }
