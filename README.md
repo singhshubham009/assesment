@@ -27,5 +27,5 @@ $ npm start
 ```sh
 $ npm run build --no-maps
 $ npm install -g serve
-$ serve build/
+$ serve -s build
 ```
