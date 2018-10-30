@@ -1,0 +1,22 @@
+.name-list-container {
+  height: 100%;
+  width: 400px;
+  position: fixed;
+  top: 40px;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.name-list-header {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 10px 20px;
+  font-size: 1.2em;
+  height: 40px;
+  width: 400px;
+  background-color: #e1e1d0;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
